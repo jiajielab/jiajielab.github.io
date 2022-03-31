@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Jiajie Lab | Shenzhen University</title>
+
+<link rel="shortcut icon" href="image/icons/tab_icon.png" type="favicon/ico" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<script src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/jssor.slider.min.js"></script>
+<script type="text/javascript" src="js/zidajs.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-90421120-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+	content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #000;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+
+}
+
+/* Container around content */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+    left: 0;
+}
+
+/* Place the container to the right */
+.right {
+    left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid #F1F3F4;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #F1F3F4;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid #F1F3F4;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #F1F3F4 transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+
+/* The actual content */
+.content {
+    padding: 20px 30px;
+    background-color: #F1F3F4;
+    position: relative;
+    border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+</style>
+
+</head>
+
+<body>
+    <!-- use jssor.slider.min.js instead for release -->
+    <!-- jssor.slider.min.js = (jssor.js + jssor.slider.js) -->
+ <!--   <script type="text/javascript" src="../js/jssor.js"></script> -->
+
+	
+    
+<div id="outer">
+  <div id="wrapper">
+  	<div id="header_wrapper">
+    	<div id="logo"><img src="image/icons/logo.JPG" width="300" height:auto /></div>
+		
+ 	<!-- 	<div id="social-media">
+		  <p>English | <a href="news_CN.html">中文</a></p>
+		</div>     
+<!-- 		<div id="social-media">
+			<ul>
+			  <li><a href="https://www.linkedin.com/pub/zida-li/40/870/6b1" target="_blank"><img src="image/icons/linkedin.png" alt="LindedIn"/></a>
+			  <li><a href="https://scholar.google.com/citations?user=9s8iCB0AAAAJ&amp;hl=en" target="_blank"><img src="image/icons/google_scholar.png" alt="Google Scholar" /></a>
+			  <li><a href="http://me.engin.umich.edu/ibbl/" target="_blank"><img src="image/icons/um_ibbl.png" alt="IBBL lab at UM" /></a>
+			  <li><a href="http://web.hku.hk/~ashum" target="_blank"><img src="image/icons/hku.png" alt="Shum lab at HKU" /></a>
+			  <li><a href="http://staff.ustc.edu.cn/~heliqun/" target="_blank"><img src="image/icons/ustc.jpg" alt="He lab at USTC" /></a>
+			</ul>
+		</div> -->
+      
+      <div id="topnav">
+        <ul>
+          <a href="index.html"><li>HOME</li></a>
+		  <a href="research.html"><li>RESEARCH</li></a>
+          <a href="people.html"> <li>MEMBERS</li></a>
+          <a href="publications.html"> <li>PUBLICATIONS</li></a>		  
+          <a href="news.html"> <li>NEWS</li></a>
+          <a href="gallery.html"> <li>GALLERY</li></a>
+          <a href="contact.html">
+          <li style="border-right: 0px">OPENINGS</li>
+          </a>
+        </ul>
+      </div>
+    </div>
+	
+	<div id="people-section">
+	  <div id="news-item">
+	    <p><b>Mar. 2022</b>: Our paper on Optothermophoretic flipping method for biomolecule interaction enhancement is accepted in <a href="https://www.sciencedirect.com/science/article/pii/S0956566322001245">Biosensors and Bioelectronics</a>!</p>
+      </div>
+	  <div id="news-item">
+        <p><b>Oct. 2021</b>: Yuhang Peng, Yili Zhong, Zhou Lu joined as a final year project student. Welcome on board!</p>
+      </div>
+	  <div id="news-item">
+        <p><b>Sep. 2021</b>: Our research article on Polymeric microsphere enhanced surface plasmon resonance imaging immunosensor for occult blood monitoring has been accepted by <a href="https://www.sciencedirect.com/science/article/pii/S092540052101426X?casa_token=g_3hkShuy20AAAAA:NxAe0TRCCxi0n4mfpmDyK_XCWl9JRMRzXgw0aAAKfanZ5z0cYY5rzbXdP8vURUfqX9uBch8RgEg">Sensors &amp; Actuators: B. Chemical</a>!</p>
+      </div>
+	  <div id="news-item">
+        <p><b>Dec. 2020</b>: Our  paper of Ultrafast SPR Imaging Sensor via the Four-Parameter-Based Spectral Curve Readjusting Method has been accepted by <a href="https://pubs.acs.org/doi/abs/10.1021/acs.analchem.0c03347?casa_token=hK8_pUe91-MAAAAA:h_0hFPzHVbMEvlDFexUOFn6T3Bc2KDzbsWT1aTRZ9HeIcwJie25K3OB51nT8aru9GPrJUVlb69RKOAEm">Analytical Chemistry</a>!</p>
+      </div>
+	  <div id="news-item">
+        <p><b>Oct. 2020</b>: Our group has been awarded Mianshang Grant by the Guangdong Science and Technology Agency!</p>
+      </div>
+	  <div id="news-item">
+        <p><b>Sep. 2020</b>: Jianxing Zhou and Xiaoqi Dai joined our group as a grad student! Welcome!</p>
+      </div>
+	  <div id="news-item">
+        <p><b>Nov. 2019</b>: Lab established!</p>
+      </div>
+	</div>
+
+
+    <div id="footer">
+    <p>Last edited: Feb 2022 | Jiajie Lab</p>
+    </div>
+</div>
+</div>
+
+</body>
+</html>
